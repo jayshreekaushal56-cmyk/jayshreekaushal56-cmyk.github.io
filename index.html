@@ -8,44 +8,187 @@
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f6f9; color: #333; }
         header { background: #1f2937; color: white; text-align: center; padding: 3rem 1rem; }
         h1 { margin: 0; font-size: 2.5rem; }
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
         .about { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 2rem; }
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .project-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #3b82f6; }
-        .project-card h3 { margin-top: 0; color: #1f2937; }
-        .btn { display: inline-block; background: #3b82f6; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; margin-top: 1rem; font-size: 0.9rem; }
+        
+        .category-title { color: #1f2937; border-bottom: 2px solid #3b82f6; padding-bottom: 0.5rem; margin-top: 3.5rem; font-size: 1.75rem; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+        .project-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s; }
+        .project-card:hover { transform: translateY(-3px); }
+        .project-card h3 { margin-top: 0; color: #1f2937; font-size: 1.2rem; }
+        .project-card p { flex-grow: 1; color: #4b5563; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        
+        /* Specialized left-border accents for categories */
+        .python-card { border-left: 5px solid #3b82f6; }   /* Python Blue */
+        .sql-card { border-left: 5px solid #10b981; }      /* SQL Green */
+        .powerbi-card { border-left: 5px solid #f59e0b; }  /* Power BI Yellow */
+        .excel-card { border-left: 5px solid #107c41; }    /* Excel Dark Green */
+
+        .btn { display: inline-block; background: #3b82f6; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; font-size: 0.9rem; text-align: center; font-weight: 500; }
         .btn:hover { background: #2563eb; }
+        .sql-card .btn { background: #10b981; }
+        .sql-card .btn:hover { background: #059669; }
+        .powerbi-card .btn { background: #f59e0b; color: #1f2937; }
+        .powerbi-card .btn:hover { background: #d97706; color: white; }
+        .excel-card .btn { background: #107c41; }
+        .excel-card .btn:hover { background: #0a5c30; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Jayshree Kaushal</h1>
-        <p>Welcome to my project portfolio!</p>
+        <p>Data Analyst Portfolio</p>
     </header>
 
     <div class="container">
         <section class="about">
             <h2>About Me</h2>
-            <p>Hi, I am Jayshree. I am passionate about working with data and building solutions using Python. This is where I showcase my work, my tech stack, and the projects I have built. Take a look around!</p>
+            <p>Hi, I am Jayshree. I am a Data Analyst specializing in transforming complex datasets into actionable business intelligence. My expertise spans writing Python scripts for automation and data science, structuring relational databases with SQL, developing interactive visualizations in Power BI, and building advanced financial and operational models in Excel.</p>
         </section>
 
-        <h2>My Projects</h2>
+        <h2 class="category-title">🐍 Python Projects</h2>
         <div class="projects-grid">
             
-            <div class="project-card">
-                <h3>Automobile Data Analysis</h3>
-                <p>A Python data analytics project that processes a structured dataset of vehicles to clean missing values, analyze performance metrics, and answer key automotive business questions using data manipulation libraries.</p>
-                <a href="https://github.com/jayshreekaushal56-cmyk" class="btn">View on GitHub</a>
+            <div class="project-card python-card">
+                <div>
+                    <h3>Automobile Data Analysis</h3>
+                    <p>An exploratory data analysis project processing a structured vehicles dataset. Cleans missing records, analyzes system performance metrics, and extracts automotive insights using Pandas and NumPy.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Automobile_assignment%201.ipynb" class="btn">View Project</a>
             </div>
 
-            <div class="project-card">
-                <h3>https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Automobile_assignment%201.ipynb</h3>
-                <p>This space is reserved for my next exciting development or data science project. Stay tuned!</p>
-                <a href="#" class="btn">Coming Soon</a>
+            <div class="project-card python-card">
+                <div>
+                    <h3>E-Commerce Supply Chain Analytics</h3>
+                    <p>A cost analysis model auditing delivery discrepancies. Maps warehousing rules against courier company invoices to isolate dynamic weight and zone calculation errors.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Logistic_assignment.ipynb
+" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card python-card">
+                <div>
+                    <h3>FMCG Product Analysis</h3>
+                    <p>A data processing script or application built using Python. (Edit this description to describe your third Python notebook or tool).</p>
+                </div>
+                <a hrefhttps://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Pandas_fmcg_assignment%202.ipynb
+" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card python-card">
+                <div>
+                    <h3>Kite Profit and loss</h3>
+                    <p>A predictive modeling or data engineering script leveraging Python workflows. (Edit this text to detail your fourth project).</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Kite_Pnl.ipynb
+" class="btn">View Project</a>
             </div>
 
         </div>
+
+        <h2 class="category-title">🗄️ SQL Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card sql-card">
+                <div>
+                    <h3>Data Analysis</h3>
+                    <p>Relational database project focusing on complex multi-table JOINs, subqueries, and structural optimization to generate business metrics.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Bank%20%20Loan%20Solutions.sql
+" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card sql-card">
+                <div>
+                    <h3>Zomato Sales</h3>
+                    <p>Data aggregation and cohort analysis using window functions, Common Table Expressions (CTEs), and advanced relational filtering.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Zomato%20Sales%20Analysis.sql
+" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card sql-card">
+                <div>
+                    <h3>Netflix Data Analysis</h3>
+                    <p>Database design and querying project mapping business processes, data constraints, and deep analytics metrics.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Netflix%20Database.sql
+" class="btn">View Project</a>
+            </div>
+
+        </div>
+
+        <h2 class="category-title">📊 Power BI Dashboards</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card powerbi-card">
+                <div>
+                    <h3>Food Chain Analysis</h3>
+                    <p>Interactive business intelligence dashboard connecting disparate tables, crafting dynamic DAX measures, and visualizing high-level KPIs.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/FOOD_CHAIN_ANALYSIS.pbix
+" class="btn">View Dashboard</a>
+            </div>
+
+            <div class="project-card powerbi-card">
+                <div>
+                    <h3>Balaji Ads Analysis</h3>
+                    <p>Operational performance tracking visual architecture mapping localized organizational metrics and time-series analytical trends.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Social%20Media%20Ad%20Conversions%20for%20BalaJi%20Pvt.%20Ltd..pbix
+" class="btn">View Dashboard</a>
+            </div>
+
+            <div class="project-card powerbi-card">
+                <div>
+                    <h3>US Walmart Sales </h3>
+                    <p>Executive analytics interface delivering dynamic slice-and-dice properties across core sales, operations, or marketing pipelines.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Walmart%20Dashboard.pbix
+" class="btn">View Dashboard</a>
+            </div>
+
+        </div>
+
+        <h2 class="category-title">📈 Excel Reports</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card excel-card">
+                <div>
+                    <h3>Sales Analysis</h3>
+                    <p>Data orchestration using dynamic array formulas, XLOOKUP systems, and deep data structuring setups.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Excel%20Project%201%20-%20Sales%20Analysis%20(Questions).xlsx" class="btn">View Report</a>
+            </div>
+
+            <div class="project-card excel-card">
+                <div>
+                    <h3>Bike Sales Dashboard</h3>
+                    <p>Advanced Pivot Table analytics engine incorporating integrated conditional formatting parameters and slicer interactivity mapping.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Excel%20Project%202%20-%20Bike%20Sales%20Dashboard%20(Questions).xlsx" class="btn">View Report</a>
+            </div>
+
+            <div class="project-card excel-card">
+                <div>
+                    <h3>Subscription Data</h3>
+                    <p>Financial or operational monitoring worksheet automating redundant computational logic arrays.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Project%203%20-%20Subscription%20Data%20(Questions).xlsx
+" class="btn">View Report</a>
+            </div>
+
+            <div class="project-card excel-card">
+                <div>
+                    <h3>Consumer_Complaints</h3>
+                    <p>Comprehensive dashboard solution relying completely on spreadsheet computations, visual styling, and clear layout structuring.</p>
+                </div>
+                <a href="https://github.com/jayshreekaushal56-cmyk/jayshreekaushal56-cmyk.github.io/blob/main/Project%204%20-%20Consumer_Complaints%20-%20Data%20(Questions).xlsx" class="btn">View Report</a>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
